@@ -1,0 +1,28 @@
+#include <kipr/wombat.h>
+
+int servo_crane=1;
+int servo_rotator=0;
+int servo_claw=2;
+
+int crane_top=1080;
+int crane_bot=1700;
+int rot_vert=1700;
+int rot_horiz=630;
+int claw_open=830;
+int claw_close=1730;
+
+
+int main()
+{
+
+    /* 
+    enable_servos();
+    set_servo_position(servo_rotator, 650);
+    msleep(500);
+    disable_servos();
+    */
+    
+    return 0;
+}
+
+
