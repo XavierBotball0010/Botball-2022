@@ -1,0 +1,71 @@
+#include <kipr/wombat.h>
+
+//Declare Variables
+
+//motor variables
+int lmotor=3;
+int rmotor=0;
+int lspeed;
+int rspeed;
+
+//servo variables
+int servo_crane=0;
+int servo_claw=3;
+int crane_top=176;
+int crane_first_rings=1060;
+int claw_open=830;
+int claw_close=180;
+
+//Declare Functions
+void forward();
+void backward();
+void open_claw();
+void close_claw();
+void raise_crane_top();
+void top_two_rings();
+
+int main()
+{
+
+    open_claw();
+    close_claw();
+    
+    
+    return 0;
+}
+
+//Define Functions
+
+void forward(){
+    
+}
+
+void backward(){
+}
+void open_claw(){
+    enable_servos();
+    set_servo_position(servo_claw, claw_open);
+    msleep(500);
+    disable_servos();
+}
+
+void close_claw(){
+    enable_servos();
+    set_servo_position(servo_claw, claw_close);
+    msleep(500);
+    disable_servos();
+}
+
+void raise_crane(){
+    enable_servos();
+    set_servo_position(servo_crane, crane_top);
+    msleep(1500);
+    disable_servos();
+}
+
+void top_two_rings(){
+    enable_servos();
+    set_servo_position(servo_crane, crane_first_rings);
+    msleep(1500);
+    disable_servos();
+}
